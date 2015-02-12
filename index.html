@@ -243,7 +243,13 @@ Get a random number between 1 and
 <input id="howBig" value="">
 <input type="button" id="randomButton3" value="Go"> <span id="randomResult3"></span>
 <script>
-// Can you figure out how to do this one?
+document.getElementById('randomButton3').onclick = function(){
+  result = Math.random()
+  result = result * document.getElementById('howBig').textContent
+  result = Math.ceil(result) 
+  document.getElementById('randomResult3').textContent = result
+}
+
 </script>
 
 
